@@ -50,13 +50,13 @@ public class CourseServiceImpl extends CRUDImpl<Course, Integer> implements ICou
         Map<Student, List<RegistrationDetail>> byCourse = streamRegistrationDetail
                 .collect(groupingBy(d->d.getRegistration().getStudent()));
 
-        Map<Course, List<Student>> byCourse2 = studentStream
+        /*Map<Course, List<Student>> byCourse2 = studentStream
                 .collect(Collectors.groupingBy(RegistrationDetail::getCourse,
                         Collectors.mapping(Registration::getStudent, Collectors.toList()))));
 
         Map<Course, List<Student>> courseStudentMap = registrationStream
                 .collect(Collectors.groupingBy(RegistrationDetail::getCourse,
-                        Collectors.mapping(RegistrationDetail::getStudent, Collectors.toList())));
+                        Collectors.mapping(RegistrationDetail::getStudent, Collectors.toList())));*/
 
         return byCourse2;
 
