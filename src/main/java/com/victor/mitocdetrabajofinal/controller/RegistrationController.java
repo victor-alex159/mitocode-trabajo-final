@@ -1,8 +1,8 @@
 package com.victor.mitocdetrabajofinal.controller;
 
+import com.victor.mitocdetrabajofinal.dto.RegistrationDTO;
 import com.victor.mitocdetrabajofinal.model.Registration;
 import com.victor.mitocdetrabajofinal.service.IRegistrationService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -23,8 +23,8 @@ public class RegistrationController {
     private final IRegistrationService registrationService;
 
     @PostMapping("/create")
-    public ResponseEntity<Registration> saveRegistration(@Valid @RequestBody Registration registration) {
-        Registration registrationSave = registrationService.saveRegistration(registration);
+    public ResponseEntity<Registration> saveRegistration(@RequestBody RegistrationDTO registrationDTO) {
+        Registration registrationSave = registrationService.saveRegistration(registrationDTO);
         return new ResponseEntity<>(registrationSave, HttpStatus.OK);
     }
 

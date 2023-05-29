@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
+/**
+ * ESTUDIANTES
+ * **/
 @Data
 @Entity
 public class Student implements Serializable {

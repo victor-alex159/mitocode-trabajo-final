@@ -6,6 +6,10 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
+/**
+ * DETALLE MATRICULA
+ * **/
 @Data
 @Entity
 public class RegistrationDetail implements Serializable {

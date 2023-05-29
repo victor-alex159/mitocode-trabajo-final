@@ -24,6 +24,11 @@ public class StudentServiceImpl extends CRUDImpl<Student, Integer> implements IS
         return studentRepository;
     }
 
+
+    /**
+     * Listar estudiantes ordenados de forma descendente por edad usando programación
+     * funcional
+     * **/
     @Override
     public List<Student> getListStudentsByAge() {
         List<Student> listStudents = studentRepository.findAll();

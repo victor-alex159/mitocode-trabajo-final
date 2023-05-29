@@ -26,7 +26,7 @@ public class StudentController {
         return new ResponseEntity<>(studentSave, HttpStatus.CREATED);
     }
 
-    @PostMapping("/update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Student> updateStudent(@Valid @RequestBody Student student, @PathVariable("id") Integer id) throws Exception {
         Student studentSave = studentService.update(student, id);
         return new ResponseEntity<>(studentSave, HttpStatus.OK);
@@ -38,7 +38,7 @@ public class StudentController {
         return new ResponseEntity<>(listStudent, HttpStatus.OK);
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteStudent(@PathVariable("id") Integer id) throws Exception {
         studentService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

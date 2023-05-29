@@ -6,6 +6,10 @@ import com.victor.mitocdetrabajofinal.service.ICRUD;
 
 import java.util.List;
 
+
+/**
+ * CRUD GENERICO PARA CURSOS, ESTUDIANTES
+ * **/
 public abstract class CRUDImpl<T, ID> implements ICRUD<T, ID> {
 
     protected abstract IGenericRepo<T, ID> getRepo();

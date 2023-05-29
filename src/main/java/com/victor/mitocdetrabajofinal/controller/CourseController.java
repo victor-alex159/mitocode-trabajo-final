@@ -26,7 +26,7 @@ public class CourseController {
         return new ResponseEntity<>(courseSave, HttpStatus.CREATED);
     }
 
-    @PostMapping("/update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Course> updateCourse(@Valid @RequestBody Course course, @PathVariable("id") Integer id) throws Exception {
         Course courseSave = courseService.update(course, id);
         return new ResponseEntity<>(courseSave, HttpStatus.OK);
@@ -38,7 +38,7 @@ public class CourseController {
         return new ResponseEntity<>(listCourse, HttpStatus.OK);
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteCourse(@PathVariable("id") Integer id) throws Exception {
         courseService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

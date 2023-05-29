@@ -30,6 +30,17 @@ public class CourseServiceImpl extends CRUDImpl<Course, Integer> implements ICou
     }
 
 
+
+    /**
+     *  Mostrar la relación de cursos matriculados y sus estudiantes correspondientes
+     *  usando programación funcional (sugerencia, usar un Map<K,V>)
+     *  o Ejemplo
+     *  ▪ Programación
+     *      • Jaime Medina
+     *  ▪ Base de Datos
+     *      • Mito X
+     *      • Code Y
+     * **/
     @Override
     public Map<String, List<String>> courseStudents() throws Exception {
         Stream<Registration> registrationStream = registrationRepository.findAll().stream();
