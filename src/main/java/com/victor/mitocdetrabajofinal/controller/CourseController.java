@@ -1,9 +1,6 @@
 package com.victor.mitocdetrabajofinal.controller;
 
 import com.victor.mitocdetrabajofinal.model.Course;
-import com.victor.mitocdetrabajofinal.model.Registration;
-import com.victor.mitocdetrabajofinal.model.RegistrationDetail;
-import com.victor.mitocdetrabajofinal.model.Student;
 import com.victor.mitocdetrabajofinal.service.ICourseService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -47,8 +44,8 @@ public class CourseController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/course-students")
-    public ResponseEntity<Map<Course, List<Registration>>> deleteCourse() throws Exception {
+    @PostMapping("/course-students")
+    public ResponseEntity<Map<String, List<String>>> coursesStudent() throws Exception {
         return new ResponseEntity<>(courseService.courseStudents(), HttpStatus.OK);
     }
 

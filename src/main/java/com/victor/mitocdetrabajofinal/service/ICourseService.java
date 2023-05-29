@@ -11,6 +11,6 @@ import java.util.Map;
 
 public interface ICourseService extends ICRUD<Course, Integer>  {
 
-    Map<Course, List<Registration>> courseStudents() throws Exception;
+    Map<String, List<String>> courseStudents() throws Exception;
 
 }

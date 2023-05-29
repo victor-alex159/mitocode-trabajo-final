@@ -8,7 +8,6 @@ import java.util.List;
 public interface IRegistrationService {
 
     List<Registration> getRegistration();
-    List<RegistrationDetail> getRegistrationDetail();
     Registration saveRegistration(Registration registration);
 
 }

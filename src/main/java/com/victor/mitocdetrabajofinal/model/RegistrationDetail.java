@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-public class    RegistrationDetail implements Serializable {
+public class RegistrationDetail implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

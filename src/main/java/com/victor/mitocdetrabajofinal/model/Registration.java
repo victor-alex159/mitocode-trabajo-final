@@ -14,6 +14,8 @@ public class Registration implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idRegistration;
+
+    @Column(nullable = false)
     private LocalDateTime dateRegistration;
 
     @ManyToOne
@@ -23,6 +25,7 @@ public class Registration implements Serializable {
     @OneToMany(mappedBy = "registration", cascade = CascadeType.ALL)
     private List<RegistrationDetail> details;
 
+    @Column(length = 1, nullable = false)
     private boolean status;
 
 }
